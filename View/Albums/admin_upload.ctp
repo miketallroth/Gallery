@@ -7,10 +7,10 @@ $this->Html->css('/gallery/css/fileuploader', array('inline' => false));
 $thumbnailClass = $this->Layout->cssClass('thumbnailClass');
 $iPrefix = $this->Html->settings['iconDefaults']['classPrefix'];
 $iDefault = $this->Html->settings['iconDefaults']['classDefault'];
-$iDelete = "$iDefault " . $iPrefix . $_icons['delete'];
-$iEdit = "$iDefault " . $iPrefix . $_icons['update'];
-$iMoveUp = "$iDefault " . $iPrefix . $_icons['move-up'];
-$iMoveDown = "$iDefault " . $iPrefix . $_icons['move-down'];
+$iDelete = "$iDefault " . $iPrefix . $this->Theme->getIcon('delete');
+$iEdit = "$iDefault " . $iPrefix . $this->Theme->getIcon('update');
+$iMoveUp = "$iDefault " . $iPrefix . $this->Theme->getIcon('move-up');
+$iMoveDown = "$iDefault " . $iPrefix . $this->Theme->getIcon('move-down');
 
 $editUrl = $this->Html->link($album['Album']['title'], array(
 	'plugin' => 'gallery',
